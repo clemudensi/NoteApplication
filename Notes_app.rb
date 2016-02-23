@@ -12,7 +12,7 @@ module Rubyist
   def create(note_content)
     if note_content.length > 0
       @notes_list.push(note_content)
-    return "Note Created"
+      return "Note Created"
     else
       return "Enter a Valid Note"
       end        
@@ -38,9 +38,9 @@ module Rubyist
     downcase_note = @note_list[key]["note"].downcase
     if downcase_note.include?(input)
       return  "Note ID: #{key} \n #{value["note"]}\n By Author #{value["author"]}\n"
-      end
-      end
+    end
   end
+end
  
   def delete(note_id)
     @notes_list.delete(note_id)
@@ -48,6 +48,6 @@ module Rubyist
    
   def edit(note_id, new_content)
     @notes_list.insert(note_id, new_content)
- end   
-end
+  end   
+ end
 end
