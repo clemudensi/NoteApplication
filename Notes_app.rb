@@ -4,7 +4,7 @@ module Rubyist
     attr_accessor :notes_list
     
     
-  def initialize(author)
+  def initialize(author, note_list)
     @author = author
     @notes_list = []
   end
